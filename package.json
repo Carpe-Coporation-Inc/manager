@@ -1,8 +1,8 @@
 {
   "name": "com.carpe.manager",
   "version": "0.0.1",
-  "displayName": "SingletonManager",
-  "description": "system singleton manager",
+  "displayName": "CoreManager",
+  "description": "core singleton manager",
   "unity": "2022.3",
   "documentationUrl": "https://example.com/",
   "changelogUrl": "https://example.com/changelog.html",

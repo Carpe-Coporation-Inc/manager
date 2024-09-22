@@ -1,12 +1,11 @@
 ﻿using UnityEngine;
 
-
-namespace Manager
+namespace CoreManager
 {
     public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         private static T _instance;
-    
+
         public static T Instance
         {
             get
@@ -18,11 +17,12 @@ namespace Manager
                     {
                         GameObject singletonObject = new GameObject();
                         _instance = singletonObject.AddComponent<T>();
-                        singletonObject.name = typeof(T).ToString() + " (Singleton)";
-                    
+                        singletonObject.name = typeof(T) + " (Singleton)";
+
                         DontDestroyOnLoad(singletonObject);
                     }
                 }
+
                 return _instance;
             }
         }
@@ -40,5 +40,4 @@ namespace Manager
             }
         }
     }
-
 }
